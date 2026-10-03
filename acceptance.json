@@ -1,0 +1,119 @@
+{
+  "issue": 1148,
+  "platform": "macOS arm64",
+  "cli_version": "1.0.18",
+  "model": "step-5-preview",
+  "live_verification_commit_before_rebase": "9443d512",
+  "PR_head_after_rebase": "004a0da3807d4741cd01fd4a6229819238b1c5be",
+  "scope": "first-phase connector; +watch deferred",
+  "method": "Actual Octop WebSocket Agent -> internal MCP -> official CLI -> authorized real mailboxes. No fake CLI or LLM. Public report extracts selected assertions from private run artifacts.",
+  "real_mail": {
+    "outbound_count": 3,
+    "operations": [
+      "send",
+      "reply",
+      "forward"
+    ],
+    "receipt_evidence": "163 automatic replies for all three",
+    "manual_reply_received": true,
+    "manual_attachment_verified": true,
+    "attachment_size_bytes": 76,
+    "attachment_sha256": "0b36569400e8c633ced39e21fd33242e03c3dea71a0213cb97259fcd60a8e066"
+  },
+  "real_LLM_read": {
+    "completed": true,
+    "tools": [
+      "agently_me",
+      "agently_search",
+      "agently_read",
+      "agently_download"
+    ],
+    "all_required_tools_succeeded": true,
+    "attachment_size_bytes": 76,
+    "attachment_sha256": "0b36569400e8c633ced39e21fd33242e03c3dea71a0213cb97259fcd60a8e066",
+    "test_agent_max_iters": 100,
+    "initial_attempt_limit": 24,
+    "initial_attempt_outcome": "test-agent recursion limit reached; final run completed with 100"
+  },
+  "real_LLM_preview_cancel": {
+    "preview_completed": true,
+    "waited_for_confirmation": true,
+    "cancellation_completed": true,
+    "approval_submitted": false,
+    "sent_mailbox_unchanged": true,
+    "tool_calls_per_turn": [
+      1,
+      0
+    ]
+  },
+  "two_authorized_mailboxes": {
+    "status": "passed",
+    "model": "step-5-preview",
+    "two_distinct_authorized_mailboxes": true,
+    "simultaneous_real_agent_turns": true,
+    "only_selected_instance_tools_called": true,
+    "mailbox_A_fixture_absent_in_B": true,
+    "refresh_B_preserved_both_identities": true,
+    "both_grants_still_authorized": true,
+    "B_cannot_read_A_message_by_id": true,
+    "A_can_still_read_same_message": true,
+    "cross_mail_native_error_code": 404,
+    "cross_mail_native_error": "Resource not found",
+    "cross_mail_LLM_turn_completed": true
+  },
+  "confirmed_writes": {
+    "additional_email_sends": 0,
+    "sent_copy_still_exists_after_previews": true,
+    "trash_preview_did_not_write": true,
+    "trash_changed_target_rejected": true,
+    "trash_confirmed": true,
+    "trash_replay_rejected": true,
+    "trash_folder_verified": true,
+    "delete_preview_did_not_write": true,
+    "delete_changed_target_rejected": true,
+    "delete_confirmed": true,
+    "delete_replay_rejected": true,
+    "permanent_delete_verified": true
+  },
+  "all_write_previews": [
+    "send",
+    "reply",
+    "forward",
+    "trash",
+    "delete"
+  ],
+  "privacy": "API keys, auth codes, approval values, mailbox addresses, message IDs and raw model reasoning are excluded.",
+  "automated_checks_after_rebase": {
+    "make_all": {
+      "exit_code": 0,
+      "passed": 4211,
+      "skipped": 17
+    },
+    "frontend_types": "passed",
+    "frontend_connector_tests": {
+      "files": 6,
+      "passed": 14
+    },
+    "frontend_changed_files_eslint": "passed",
+    "frontend_production_build": "passed",
+    "CLI_contract": {
+      "rounds": 3,
+      "checks_per_round": 38
+    },
+    "make_check_all": {
+      "exit_code": 2,
+      "blocked_by_unchanged_base_files": [
+        {
+          "path": "dashboard/src/pages/Agent/Channels/components/constants.test.ts",
+          "line": 5,
+          "error": "unused DEFAULT_CHANNEL_DISPLAY_CONFIG"
+        },
+        {
+          "path": "dashboard/src/pages/Chat/hooks/chatStore.ts",
+          "line": 1204,
+          "error": "no-extra-boolean-cast"
+        }
+      ]
+    }
+  }
+}

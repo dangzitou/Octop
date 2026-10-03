@@ -130,5 +130,27 @@
     "changed_frontend_lint": "passed",
     "frontend_typecheck": "passed",
     "production_build": "passed"
+  },
+  "ui_polish": {
+    "source_commit": "2e6dd3681dc360f63c260a797790d8433f6aebc7",
+    "changed_files": 4,
+    "make_all": {
+      "passed": 4212,
+      "skipped": 17,
+      "exit_code": 0
+    },
+    "frontend_tests": {
+      "files": 6,
+      "passed": 23
+    },
+    "tsc_changed_files_eslint_production_build": "passed",
+    "screenshots": [
+      "07-connector-polished.jpg",
+      "08-watch-form-polished.jpg"
+    ],
+    "observed_themes": [
+      "light",
+      "dark"
+    ]
   }
 }

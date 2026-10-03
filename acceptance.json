@@ -4,7 +4,7 @@
   "cli_version": "1.0.18",
   "model": "step-5-preview",
   "live_verification_commit_before_rebase": "9443d512",
-  "PR_head_after_rebase": "61ba0208605a0855dd2c6806d970209bf4988b43",
+  "PR_head_after_rebase": "d11fd74ac056021ddaa8d73d46fe4c1b47676ecf",
   "scope": "Agent Mail connector, device authorization, mail/attachments, two-phase writes, isolated mailboxes, and new-mail Cron triggers",
   "method": "Actual Octop WebSocket Agent -> internal MCP -> official CLI -> authorized real mailboxes. No fake CLI or LLM. Public report extracts selected assertions from private run artifacts.",
   "real_mail": {
@@ -85,13 +85,13 @@
   "automated_checks_after_rebase": {
     "make_all": {
       "exit_code": 0,
-      "passed": 4208,
+      "passed": 4212,
       "skipped": 17
     },
     "frontend_types": "passed",
     "frontend_connector_tests": {
-      "files": 5,
-      "passed": 13
+      "files": 6,
+      "passed": 23
     },
     "frontend_changed_files_eslint": "passed",
     "frontend_production_build": "passed",
@@ -113,10 +113,6 @@
           "error": "no-extra-boolean-cast"
         }
       ]
-    },
-    "pytest": {
-      "passed": 4212,
-      "skipped": 17
     }
   },
   "essential_backend_checks": {

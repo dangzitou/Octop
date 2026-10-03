@@ -82,13 +82,11 @@
     "trash",
     "delete"
   ],
-  "privacy": "",
   "automated_checks_after_rebase": {
     "make_all": {
       "exit_code": 0,
-      "passed": 4211,
-      "skipped": 17,
-      "note": "Full suite passed before removing redundant tests; final reduced suite is being checked."
+      "passed": 4208,
+      "skipped": 17
     },
     "frontend_types": "passed",
     "frontend_connector_tests": {

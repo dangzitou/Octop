@@ -4,8 +4,8 @@
   "cli_version": "1.0.18",
   "model": "step-5-preview",
   "live_verification_commit_before_rebase": "9443d512",
-  "PR_head_after_rebase": "46f5bac956cba8574b8888814c661adb1e3b2817",
-  "scope": "first-phase connector; +watch deferred",
+  "PR_head_after_rebase": "61ba0208605a0855dd2c6806d970209bf4988b43",
+  "scope": "Agent Mail connector, device authorization, mail/attachments, two-phase writes, isolated mailboxes, and new-mail Cron triggers",
   "method": "Actual Octop WebSocket Agent -> internal MCP -> official CLI -> authorized real mailboxes. No fake CLI or LLM. Public report extracts selected assertions from private run artifacts.",
   "real_mail": {
     "outbound_count": 3,
@@ -113,10 +113,26 @@
           "error": "no-extra-boolean-cast"
         }
       ]
+    },
+    "pytest": {
+      "passed": 4212,
+      "skipped": 17
     }
   },
   "essential_backend_checks": {
     "passed": 42
   },
-  "windows_platform_mypy": "passed"
+  "windows_platform_mypy": "passed",
+  "watch_acceptance_file": "watch-acceptance.json",
+  "final_checks": {
+    "make_all": {
+      "passed": 4212,
+      "skipped": 17
+    },
+    "windows_mypy": "passed",
+    "frontend_related_tests": 23,
+    "changed_frontend_lint": "passed",
+    "frontend_typecheck": "passed",
+    "production_build": "passed"
+  }
 }

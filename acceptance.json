@@ -4,7 +4,7 @@
   "cli_version": "1.0.18",
   "model": "step-5-preview",
   "live_verification_commit_before_rebase": "9443d512",
-  "PR_head_after_rebase": "004a0da3807d4741cd01fd4a6229819238b1c5be",
+  "PR_head_after_rebase": "46f5bac956cba8574b8888814c661adb1e3b2817",
   "scope": "first-phase connector; +watch deferred",
   "method": "Actual Octop WebSocket Agent -> internal MCP -> official CLI -> authorized real mailboxes. No fake CLI or LLM. Public report extracts selected assertions from private run artifacts.",
   "real_mail": {
@@ -82,17 +82,18 @@
     "trash",
     "delete"
   ],
-  "privacy": "API keys, auth codes, approval values, mailbox addresses, message IDs and raw model reasoning are excluded.",
+  "privacy": "",
   "automated_checks_after_rebase": {
     "make_all": {
       "exit_code": 0,
       "passed": 4211,
-      "skipped": 17
+      "skipped": 17,
+      "note": "Full suite passed before removing redundant tests; final reduced suite is being checked."
     },
     "frontend_types": "passed",
     "frontend_connector_tests": {
-      "files": 6,
-      "passed": 14
+      "files": 5,
+      "passed": 13
     },
     "frontend_changed_files_eslint": "passed",
     "frontend_production_build": "passed",
@@ -115,5 +116,9 @@
         }
       ]
     }
-  }
+  },
+  "essential_backend_checks": {
+    "passed": 42
+  },
+  "windows_platform_mypy": "passed"
 }

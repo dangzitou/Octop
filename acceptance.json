@@ -152,5 +152,24 @@
       "light",
       "dark"
     ]
+  },
+  "windows_watch_cleanup_test_fix": {
+    "source_commit": "6322bcfcbd1d8985e7fadf67cfd835cf1729d6c5",
+    "failed_check": "https://github.com/TencentCloud/Octop/actions/runs/37142899780/job/111260872108",
+    "cause": "The subprocess test stub also intercepted taskkill during Windows cleanup.",
+    "change": "Only replace the watch subprocess; pass other commands through unchanged.",
+    "local_emulated_windows_cleanup_branch": {
+      "before": "same assertion failed",
+      "after": "3 tests passed"
+    },
+    "connector_cron_i18n_tests": {
+      "passed": 403
+    },
+    "make_all": {
+      "passed": 4212,
+      "skipped": 17,
+      "exit_code": 0
+    },
+    "native_windows_ci_check": "https://github.com/TencentCloud/Octop/pull/1573/checks"
   }
 }
